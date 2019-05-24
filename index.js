@@ -8,16 +8,18 @@ const { performance } = require('perf_hooks');
 
 const xmldir = '/Users/punkish/Projects/zenodeo/data/treatmentsDump';
 const xmlfiles = fs.readdirSync(xmldir);
+
 let uniqTags = {};
 let uniqTagsAttribs = {};
 let uniqTagsAttribsPairs = {};
 let treatmentIDs = {};
 
+let resultingHash = {};
+
 const t0 = performance.now();
 
 let i = 0;
 let j = xmlfiles.length;
-j = 3;
 
 // update the progress bar every 10% of the total num of files
 const tickInterval = Math.floor( j / (j * 0.10) );
@@ -74,6 +76,15 @@ for (; i < j; i++) {
             // create a tagAttribsPairsStr by joining the tagAttribsPairs 
             // with a '*'
             const tagAttribsPairsStr = tagAttribsPairs.join('*');
+
+            // Composes the desired display of the key: <tag attr="value">
+            // As we're always looking for a "type" attribute, e.attribs.type 
+            // works just fine
+            let composedKey;
+            if (e.attribs.type) {
+                composedKey = `<${e.name} type="${e.attribs.type}">`;
+                resultingHash[ composedKey ] = resultingHash[ composedKey ] ? resultingHash[ composedKey ] + 1 : 1;
+            }
 
             // Store the name of the file (really the treatmentID) keyed 
             // by the unique tags or tagAttribs or tagAttribsPairsStr
@@ -161,5 +172,17 @@ Object.keys(uniqTagsAttribsPairs)
 
 fs.writeFileSync('reports/tagAttribute-pairs.tsv', rep, 'utf8');
 
+headers = ['tag with attr="type"', 'frequency'];
+rep = headers.join('\t') + '\n';
+
+Object.keys(resultingHash)
+    .sort()
+    .forEach(t => {
+
+        const row = [t, resultingHash[t]]
+        rep += row.join('\t') + '\n'; 
+    });
+
+fs.writeFileSync('reports/variance-on-attr-type.tsv', rep, 'utf8');
 const t1 = performance.now();
 console.log(`extracted unique tags from ${j} files in ${(t1 - t0).toFixed(2)} ms`);
