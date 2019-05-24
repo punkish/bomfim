@@ -1,0 +1,37 @@
+tag	attributes	xml	frequency
+caption	pageId,pageNumber	0000FF274C34685DF31CA1267650D8E7	1
+mods:classification	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:date	no attributes	0002CCEA6E14946162FAECDE5B68E880	2
+mods:dateIssued	no attributes	0000C505BB5D484C76BE9AB6999DEB23	1
+mods:detail	type	0002CCEA6E14946162FAECDE5B68E880	2
+mods:end	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:extent	unit	0002CCEA6E14946162FAECDE5B68E880	3
+mods:identifier	type	0002CCEA6E14946162FAECDE5B68E880	6
+mods:location	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:mods	xmlns:mods	0002CCEA6E14946162FAECDE5B68E880	3
+mods:name	type	0002CCEA6E14946162FAECDE5B68E880	8
+mods:namePart	no attributes	0002CCEA6E14946162FAECDE5B68E880	8
+mods:number	no attributes	0002CCEA6E14946162FAECDE5B68E880	2
+mods:originInfo	no attributes	0000C505BB5D484C76BE9AB6999DEB23	1
+mods:part	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:publisher	no attributes	0000C505BB5D484C76BE9AB6999DEB23	1
+mods:relatedItem	type	0002CCEA6E14946162FAECDE5B68E880	3
+mods:role	no attributes	0002CCEA6E14946162FAECDE5B68E880	8
+mods:roleTerm	no attributes	0002CCEA6E14946162FAECDE5B68E880	8
+mods:start	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:title	no attributes	0002CCEA6E14946162FAECDE5B68E880	6
+mods:titleInfo	no attributes	0002CCEA6E14946162FAECDE5B68E880	6
+mods:typeOfResource	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+mods:url	no attributes	0002CCEA6E14946162FAECDE5B68E880	3
+normalizedToken	originalValue	0002CCEA6E14946162FAECDE5B68E880	3
+paragraph	pageId,pageNumber	0002CCEA6E14946162FAECDE5B68E880	15
+paragraph	pageNumber	0000C505BB5D484C76BE9AB6999DEB23	2
+subSubSection	pageId,pageNumber,type	0002CCEA6E14946162FAECDE5B68E880	9
+subSubSection	type	0000C505BB5D484C76BE9AB6999DEB23	2
+taxonomicName	LSID-HNS,class,family,genus,higherTaxonomySource,kingdom,lsidName,lsidName-HNS,order,pageNumber,phylum,rank,species	0000C505BB5D484C76BE9AB6999DEB23	2
+taxonomicName	authority,authorityName,authorityYear,class,family,genus,higherTaxonomySource,kingdom,lsidName,order,pageId,pageNumber,phylum,rank,species	0002CCEA6E14946162FAECDE5B68E880	2
+taxonomicName	class,family,genus,higherTaxonomySource,kingdom,lsidName,order,pageId,pageNumber,phylum,rank	0000FF274C34685DF31CA1267650D8E7	2
+taxonomicName	class,family,genus,higherTaxonomySource,kingdom,lsidName,order,pageId,pageNumber,phylum,rank,species	0002CCEA6E14946162FAECDE5B68E880	5
+taxonomicNameLabel	no attributes	0000C505BB5D484C76BE9AB6999DEB23	1
+treatment	LSID,httpUri	0000C505BB5D484C76BE9AB6999DEB23	1
+treatment	LSID,httpUri,pageId,pageNumber	0002CCEA6E14946162FAECDE5B68E880	2
