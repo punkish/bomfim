@@ -80,14 +80,7 @@ for (; i < j; i++) {
             // with a '*'
             const tagAttribsPairsStr = tagAttribsPairs.join('*');
 
-            // Composes the desired display of the key: <tag attr="value">
-            // As we're always looking for a "type" attribute, e.attribs.type 
-            // works just fine
-            // let composedKey;
-            // if (e.attribs.type) {
-            //     composedKey = `<${e.name} type="${e.attribs.type}">`;
-            //     resultingHash[ composedKey ] = resultingHash[ composedKey ] ? resultingHash[ composedKey ] + 1 : 1;
-            // }
+            // get variance on attributes
             MG.attr(resultingHash, e);
 
             // Store the name of the file (really the treatmentID) keyed 
