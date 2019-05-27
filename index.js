@@ -6,6 +6,9 @@ const cheerio = require('cheerio');
 const progress = require('progress');
 const { performance } = require('perf_hooks');
 
+// Coded by @mguidoti
+const MG = require('./attr');
+
 const xmldir = '/Users/punkish/Projects/zenodeo/data/treatmentsDump';
 const xmlfiles = fs.readdirSync(xmldir);
 
@@ -20,6 +23,7 @@ const t0 = performance.now();
 
 let i = 0;
 let j = xmlfiles.length;
+j = 10;
 
 // update the progress bar every 10% of the total num of files
 const tickInterval = Math.floor( j / (j * 0.10) );
@@ -80,11 +84,12 @@ for (; i < j; i++) {
             // Composes the desired display of the key: <tag attr="value">
             // As we're always looking for a "type" attribute, e.attribs.type 
             // works just fine
-            let composedKey;
-            if (e.attribs.type) {
-                composedKey = `<${e.name} type="${e.attribs.type}">`;
-                resultingHash[ composedKey ] = resultingHash[ composedKey ] ? resultingHash[ composedKey ] + 1 : 1;
-            }
+            // let composedKey;
+            // if (e.attribs.type) {
+            //     composedKey = `<${e.name} type="${e.attribs.type}">`;
+            //     resultingHash[ composedKey ] = resultingHash[ composedKey ] ? resultingHash[ composedKey ] + 1 : 1;
+            // }
+            MG.attr(resultingHash, e);
 
             // Store the name of the file (really the treatmentID) keyed 
             // by the unique tags or tagAttribs or tagAttribsPairsStr
