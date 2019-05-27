@@ -4,14 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
 
-const xmldir = 'C:\\Users\\Marcus\\projects\\work\\plazi\\zenodeo\\data\\treatmentsDump';
+const xmldir = 'C:\\Users\\Marcus\\projects\\work\\plazi\\zenodeo\\data\\treatmentDump2';
 const xmlfiles = fs.readdirSync(xmldir);
 
-// Sets the tags to be searched. As we'w
-const tagsToSearch = ['subSubSection', 'mods:name']
-
 let i = 0; 
-let j = tagsToSearch.length;
+let j = xmlfiles.length;
 
 let resultingHash = {}
 
