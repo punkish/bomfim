@@ -23,7 +23,6 @@ const t0 = performance.now();
 
 let i = 0;
 let j = xmlfiles.length;
-j = 10;
 
 // update the progress bar every 10% of the total num of files
 const tickInterval = Math.floor( j / (j * 0.10) );
